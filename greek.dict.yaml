@@ -6,7 +6,7 @@ name: greek
 version: "0.1"
 sort: original
 ...
-
+Ωελλ Ι αμ ςυστ ωριτινγ ιν Greeκ
 #Lower case symbols
 α	a
 β	b
@@ -33,31 +33,3 @@ sort: original
 χ	x
 ψ	y
 ω	w
-
-#Uppercase symbols
-Α	A
-Β	B
-Γ	C
-Δ	D
-Ε	E
-Ζ	Z
-Η	H
-Θ	Q
-Ι	I
-Κ	K
-Λ	L
-Μ	M
-Ν	N
-Ο	O
-Π	P
-Ρ	R
-Σ	S
-Τ	T
-Υ	U
-Φ	F
-Ξ	C
-Χ	X
-Ψ	Y
-Ω	W
-
-◌́	/
