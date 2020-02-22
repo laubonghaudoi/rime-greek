@@ -3,41 +3,37 @@
 
 schema:
   schema_id: greek
-  name: 希腊字母
+  name: Ancient Greek
   version: "0.1"
   author:
-    - AlephAlpha <alephalpha911@gmail.com>
+    - laubonghaudoi <laubonghaudoi@icloud.com>
   description: |
-    输入希腊字母及其他数学符号。
-
-switches:
-  - name: ascii_mode
-    reset: 0
-    states: [ 希腊, 拉丁 ]
+    Input Greek letters with English keyboard.
 
 engine:
   processors:
-    - ascii_composer
+    - key_binder
     - speller
     - selector
     - navigator
     - express_editor
   segmentors:
-    - ascii_segmentor
     - abc_segmentor
     - fallback_segmentor
   translators:
-    - r10n_translator
-  filters:
-    - uniquifier
+    - table_translator
 
 speller:
-  alphabet: 'ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba'
-  delimiter: " '"
-  algebra:
-    - derive/([A-Z])/\L$1/
-    
+  alphabet: 'ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba/\=()|'
+  delimiter: ' '
+  auto_select: true
+
 translator:
   dictionary: greek
+  enable_sentence: false
   enable_user_dict: false
-  spelling_hints: 1
+  comment_format:
+    - xform/^~//
+
+key_binder:
+  import_preset: default
